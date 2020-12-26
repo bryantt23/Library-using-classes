@@ -1,5 +1,14 @@
 let myLibrary = [];
 
+class Book {
+  // the constructor...
+  constructor(title, author, read = false) {
+    this.title = title;
+    this.author = author;
+    this.read = read;
+  }
+}
+
 const myLibraryDefault = [
   new Book('Jurassic Park', 'Michael Crichton'),
   new Book('Jane Eyre', 'Charlotte Bronte', true)
@@ -54,13 +63,6 @@ document.addEventListener('click', function (e) {
   }
   showBooksOnPage();
 });
-
-function Book(title, author, read = false) {
-  // the constructor...
-  this.title = title;
-  this.author = author;
-  this.read = read;
-}
 
 function addBookToLibrary(book) {
   // do stuff here
